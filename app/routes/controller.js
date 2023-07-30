@@ -218,24 +218,7 @@ const adminDash = async (req, res) => {
             limit: 1
         })
 
-        //max sell brand
-        // const mostSellBrand = await Transaction.findAll({
-        //     attributes: [
-        //         'car.brand.brandId', 
-        //         [Sequelize.fn('COUNT', Sequelize.col('car.brand.brandId')), 'count'],
-        //     ],
-        //     include: [{
-        //         model: Car,
-        //         attributes: [],
-        //         include: [{
-        //             model: Brand,
-        //             attributes: ['sBrandName'],
-        //         }],
-        //     }],
-        //     group: ['car.brand.brandId'],
-        //     order: [[Sequelize.fn('COUNT', Sequelize.col('car.brand.brandId')), 'DESC']],
-        //     limit: 1,
-        // })
+       
 
         res.status(200).json({
             total_Cars_Sell: totalCarsSell,
