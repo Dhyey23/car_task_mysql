@@ -201,10 +201,10 @@ const adminDash = async (req, res) => {
             group: ['carId'],
             order: [[Sequelize.fn('COUNT', 'carId'), 'DESC']],
             limit: 1,
-            // include: [{
-            //     model: Car,
-            //     attributes: ['sName'],
-            // }],
+            include: [{
+                model: Car,
+                attributes: ['sName'],
+            }],
         })
 
         // max city
